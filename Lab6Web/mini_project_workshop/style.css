@@ -1,0 +1,28 @@
+:root { --biru: #3478c8; --biru-tua: #173f75; --merah: #b42318; --hijau: #067647; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: linear-gradient(160deg, #eaf2ff, #f8fbff); color: #1f2937; line-height: 1.5; }
+.wadah { max-width: 900px; margin: 0 auto; padding: 28px 16px 48px; }
+h1 { color: var(--biru-tua); margin: 0 0 4px; }
+.sub { margin: 0 0 20px; color: #52607a; }
+.grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; align-items: start; }
+form, .ringkasan { background: #fff; border: 1px solid #d9e2ef; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(23,63,117,.06); }
+.bidang { margin-bottom: 14px; }
+label { display: block; font-weight: 600; margin-bottom: 4px; }
+input, select { width: 100%; padding: 10px; font-size: 1rem; border: 1px solid #b8c4d6; border-radius: 8px; background: #fff; }
+input:focus, select:focus { outline: 2px solid #9cc2f0; border-color: var(--biru); }
+input.tidak-valid, select.tidak-valid { border-color: var(--merah); background: #fff6f5; }
+input.valid, select.valid { border-color: var(--hijau); }
+.info { display: flex; justify-content: space-between; min-height: 1.3em; font-size: .88rem; margin-top: 3px; }
+.galat { color: var(--merah); }
+.hitung { color: #687386; margin-left: auto; }
+.aksi { display: flex; gap: 10px; }
+button { background: var(--biru); color: #fff; border: 0; border-radius: 8px; padding: 10px 20px; font-size: 1rem; cursor: pointer; }
+button:hover { background: var(--biru-tua); }
+button.sekunder { background: #fff; color: var(--biru-tua); border: 1px solid var(--biru); }
+#pesanForm { margin: 14px 0 0; font-weight: 600; min-height: 1.5em; }
+#pesanForm.sukses { color: var(--hijau); background: #ecfdf3; border-radius: 8px; padding: 10px 12px; }
+#pesanForm.error { color: var(--merah); background: #fff6f5; border-radius: 8px; padding: 10px 12px; }
+.ringkasan h2 { margin-top: 0; font-size: 1.1rem; color: var(--biru-tua); }
+dt { font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: #687386; margin-top: 10px; }
+dd { margin: 2px 0 0; font-weight: 600; word-break: break-word; }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } .aksi button { flex: 1; } }
